@@ -1,0 +1,30 @@
+﻿Score tablosu entegrasyonu yapılacak
+	Günlük, haftalık, aylık ve her zamanki
+Offline'sa scorecard'ın çatlamaması gerek.
+
+
+         RSACrypto oRSA = new RSACrypto(2048);
+            oRSA.PaddingProvider = new RSA.PaddingProviders.PKCS1v1_5();
+            oRSA.FromXmlString(@"<RSAKeyValue><Modulus>VttsmmgjK68Chbr4BIaY6QSwIXeE+xiSC0w4ZVqdDOlBmAV5Fe3dCHLydtTa+QlqfQ2J4PmzSU2757vwNKp6/i0fNTSSmozCXIakMFqQy8JlSroMboAOjebusHP9rXu9B059j/DkNU58qsgSjge4WS1NI50dNVDfX2bsdsnWsVvsaLlkg5/4QGu2wEPmUcaoAL7OGj5hEsLUBebOCqtG1Ia/fEX2INzIZ/lsamVlX/h0P+pLj0HsmknUnIz6rDyH1PBLLbBB16BL5+exFnHmidufQvxjekfG2jU/pjaktZEP0XM9OVykMDpUnCl6SWJt2n933hmgET34PBIHdPMpyw==</Modulus><Exponent>AAEAAQ==</Exponent></RSAKeyValue>");
+
+            Service.AddRecordAsync(Convert.ToBase64String(oRSA.Encrypt(System.Text.Encoding.UTF8.GetBytes("asdasdasd"))), Convert.ToBase64String (oRSA.Encrypt(System.Text.Encoding.UTF8.GetBytes("34"))));
+
+
+next step - türkçeleştirmek
+Next step - facebook/twitter entegrasyonu
+
+v1.2 Changes
+-Fixed Live Tile Visual
+-Wrong answers cost a live.
+-Changed the RBG value of yellow to get a better visibility.
+-Tombstoning / Resuming support after accidental shut downs.
+-Fixed additional minor bugs.
+
+v1.1 Changes
+-Minor bug fixes and UX improvement.
+-Guru run introduced as a timed gameplay experience.
+-Now you have three lives for each game!
+-Thanks to Dominar Quintus and kidjenius for improvement suggestions.
+
+v1
+Initial release
